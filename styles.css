@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(212, 21%, 14%);
+  --white: (0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 0.1px);
+  background-color: var(--cream);
+  font-family: 'Montserrat', sans-serif; 
+  color: hsl(212, 21%, 60%);
+  font-size: 14px;
+  
+}
+
+h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  color: var(--very-dark-blue);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.image img {
+  width: 100%;
+  border-radius: .6rem .6rem 0 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem 1.5rem;
+}
+
+.description {
+  background-color: #fff;
+  padding: 1.5rem 1.6rem;
+  border-radius: 0 0 .6rem .6rem;
+  margin-top: -1rem;
+}
+
+.description p {
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 1.4rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+ul .price1 {
+  margin-right: 1rem;
+  color: var(--dark-cyan);
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Fraunces', serif;
+}
+
+ul .price2 {
+  text-decoration: line-through;
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--dark-cyan);
+  border: none;
+  outline: none;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: hsl(158, 36%, 15%);
+}
+
+button img {
+  margin-right: .5rem;
+  font-size: 1.2rem;
+}
+
+
+@media (min-width: 640px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image {
+    background-image: url("/images/image-product-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: .6rem 0 0 .6rem;
+  }
+
+  .image img {
+    display: none;
+  }
+
+  .description {
+    border-radius: 0;
+    margin-top: 0;
+    border-radius: 0 .6rem .6rem 0;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+  }
+}
